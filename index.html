@@ -2,31 +2,91 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Embedded Tableau Viz (iframe)</title>
+  <title>My Tableau Portfolio</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <style>
-    /* Make the iframe responsive */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 1.5rem;
+      color: #2a2a2a;
+    }
+
     .tableau-container {
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      height: 700px; /* adjust as needed */
+      height: 700px;
     }
-    .tableau-container iframe {
+
+    iframe {
       width: 100%;
       height: 100%;
       border: none;
     }
+
+    /* Gallery styles */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .gallery a {
+      text-decoration: none;
+      color: #333;
+      text-align: center;
+      width: 300px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      transition: transform 0.2s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .caption {
+      margin-top: 8px;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
-  <h2>My Tableau Visualization</h2>
+  <h1>My Tableau Portfolio</h1>
+
+  <!-- Featured Viz (Avocado Apocalypse) -->
+  <h2>Yelp Restaurant Review Dashboard</h2>
   <div class="tableau-container">
-    <!-- Replace the src with your Tableau embed URL -->
-    <iframe src="https://public.tableau.com/views/AvocadoApocalypseAnalysis/Avocado?:embed=y&:showVizHome=no&:display_count=n"
-            allowfullscreen
-            loading="lazy"
-            title="Embedded Tableau Visualization"></iframe>
+    <iframe 
+      src="https://public.tableau.com/views/YelpTextMining_17580463966820/ODBQuality?:embed=y&:showVizHome=no&:display_count=n"
+      allowfullscreen
+      loading="lazy"
+      title="Yelp Restaurant Review Dashboard"></iframe>
+  </div>
+
+  <!-- Gallery of Other Dashboards -->
+  <h2>Avocado Apocalypse Analysis</h2>
+  <div class="gallery">
+    <!-- Example 1 -->
+    <a href="https://public.tableau.com/views/AvocadoApocalypseAnalysis/Avocado" target="_blank">
+      <div class="caption">Avocado Apocalypse Analysis</div>
+    </a>
+
+   <h2>Historical Data of Mortality Rates in the US</h2>
+    <a href="https://public.tableau.com/views/Capstone14_15564930558420/Story1?:embed=y&:showVizHome=no&:display_count=n" target="_blank">
+      <div class="caption">Another Dashboard</div>
+    </a>
+    
   </div>
 </body>
 </html>
