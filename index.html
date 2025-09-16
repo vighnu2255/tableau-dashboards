@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>My Tableau Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9fb;
+      color: #333;
+    }
+
+    header {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    section {
+      margin: 40px auto;
+      max-width: 1200px;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+      border-left: 4px solid #27ae60;
+      padding-left: 10px;
+      color: #2c3e50;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: flex-start;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      width: 300px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+    }
+
+    .card-content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card-content h3 {
+      font-size: 1rem;
+      margin: 10px 0;
+    }
+
+    .card-content a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      background: #27ae60;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 4px;
+      transition: background 0.2s ease;
+    }
+
+    .card-content a:hover {
+      background: #219150;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Tableau Portfolio</h1>
+    <p>Interactive dashboards and data stories built with Tableau</p>
+  </header>
+
+  <!-- Section 1 -->
+  <section>
+    <h2>Featured Dashboard</h2>
+    <div class="gallery">
+      <div class="card">
+        <img src="https://public.tableau.com/thumb/views/AvocadoApocalypseAnalysis/Avocado"
+             alt="Avocado Apocalypse Analysis">
+        <div class="card-content">
+          <h3>Avocado Apocalypse Analysis</h3>
+          <a href="https://public.tableau.com/views/AvocadoApocalypseAnalysis/Avocado?:embed=y&:showVizHome=no&:display_count=n" target="_blank">
+            View Dashboard
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section>
+    <h2>Text Mining & NLP</h2>
+    <div class="gallery">
+      <div class="card">
+        <img src="https://public.tableau.com/thumb/views/YelpTextMining_17580463966820/ODBQuality"
+             alt="Yelp Text Mining – ODB Quality">
+        <div class="card-content">
+          <h3>Yelp Text Mining – ODB Quality</h3>
+          <a href="https://public.tableau.com/views/YelpTextMining_17580463966820/ODBQuality?:embed=y&:showVizHome=no&:display_count=n" target="_blank">
+            View Dashboard
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section>
+    <h2>Capstone Projects</h2>
+    <div class="gallery">
+      <div class="card">
+        <img src="https://public.tableau.com/thumb/views/Capstone14_15564930558420/Story1"
+             alt="Capstone Story">
+        <div class="card-content">
+          <h3>Capstone Story</h3>
+          <a href="https://public.tableau.com/views/Capstone14_15564930558420/Story1?:embed=y&:showVizHome=no&:display_count=n" target="_blank">
+            View Dashboard
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
