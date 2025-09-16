@@ -1,85 +1,170 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
   <title>My Tableau Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-family: "Segoe UI", Arial, sans-serif;
       background: #f8f9fa;
       margin: 0;
-      padding: 20px;
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #2c3e50;
-    }
-
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-      gap: 25px;
-      align-items: start;
-    }
-
-    .dashboard {
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      transition: transform 0.2s ease-in-out;
-    }
-
-    .dashboard:hover {
-      transform: translateY(-5px);
-    }
-
-    .dashboard iframe {
-      width: 100%;
-      height: 400px;
-      border: none;
-    }
-
-    .caption {
-      text-align: center;
-      padding: 12px;
-      background: #f1f3f5;
-      font-weight: bold;
+      padding: 0;
       color: #333;
     }
 
+    header {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 1rem;
+    }
+
+    section {
+      margin: 40px auto;
+      max-width: 1400px;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+      border-left: 4px solid #27ae60;
+      padding-left: 10px;
+      color: #2c3e50;
+    }
+
+    /* Grid layout for cards */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+    }
+
+    .card-content {
+      padding: 15px;
+      text-align: center;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-content h3 {
+      font-size: 1rem;
+      margin: 10px 0;
+      flex-grow: 1;
+    }
+
+    .card-content a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      background: #27ae60;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 4px;
+      transition: background 0.2s ease;
+    }
+
+    .card-content a:hover {
+      background: #219150;
+    }
+
     @media (max-width: 768px) {
-      .dashboard iframe {
-        height: 300px;
+      section {
+        padding: 0 10px;
       }
     }
   </style>
 </head>
 <body>
-  <h1>My Tableau Dashboards</h1>
-  <div class="grid-container">
 
-    <!-- Avocado Apocalypse -->
-    <div class="dashboard">
-      <iframe src="https://public.tableau.com/views/AvocadoApocalypseAnalysis/Avocado?:embed=y&:showVizHome=no&:display_count=n"></iframe>
-      <div class="caption">Avocado Apocalypse Analysis</div>
+  <header>
+    <h1>My Tableau Portfolio</h1>
+    <p>Interactive dashboards and data stories built with Tableau</p>
+  </header>
+
+  <!-- Section: Featured Dashboard -->
+  <section>
+    <h2>Avocado Apocalypse Chart</h2>
+    <div class="gallery">
+      <div class="card">
+        <img src="https://public.tableau.com/thumb/views/AvocadoApocalypseAnalysis/Avocado"
+             alt="Avocado Apocalypse Analysis">
+        <div class="card-content">
+          <h3>Avocado Apocalypse Analysis</h3>
+          <a href="https://public.tableau.com/views/AvocadoApocalypseAnalysis/Avocado?:embed=y&:showVizHome=no&:display_count=n" target="_blank">
+            View Dashboard
+          </a>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Yelp Text Mining -->
-    <div class="dashboard">
-      <iframe src="https://public.tableau.com/views/YelpTextMining_17580463966820/ODBQuality?:embed=y&:showVizHome=no&:display_count=n"></iframe>
-      <div class="caption">Yelp Restaurant Dashboard – ODB Quality</div>
+  <!-- Section: Text Mining & NLP -->
+  <section>
+    <h2>Yelp Restaurant Dashboard</h2>
+    <div class="gallery">
+      <div class="card">
+        <img src="https://public.tableau.com/thumb/views/YelpTextMining_17580463966820/ODBQuality"
+             alt="Yelp Text Mining – ODB Quality">
+        <div class="card-content">
+          <h3>Yelp Restaurant Dashboard – ODB Quality</h3>
+          <a href="https://public.tableau.com/views/YelpTextMining_17580463966820/ODBQuality?:embed=y&:showVizHome=no&:display_count=n" target="_blank">
+            View Dashboard
+          </a>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Capstone Story -->
-    <div class="dashboard">
-      <iframe src="https://public.tableau.com/views/Capstone14_15564930558420/Story1?:embed=y&:showVizHome=no&:display_count=n"></iframe>
-      <div class="caption">US Historical Mortality Rates</div>
+  <!-- Section: Capstone Projects -->
+  <section>
+    <h2>Mortality Rate Capstone Project</h2>
+    <div class="gallery">
+      <div class="card">
+        <img src="https://public.tableau.com/thumb/views/Capstone14_15564930558420/Story1"
+             alt="Capstone Story">
+        <div class="card-content">
+          <h3>Historical Mortality Rates in the US - Capstone Story</h3>
+          <a href="https://public.tableau.com/views/Capstone14_15564930558420/Story1?:embed=y&:showVizHome=no&:display_count=n" target="_blank">
+            View Dashboard
+          </a>
+        </div>
+      </div>
     </div>
+  </section>
 
-  </div>
 </body>
 </html>
