@@ -32,7 +32,7 @@
 
     section {
       margin: 40px auto;
-      max-width: 1400px;
+      max-width: 100%;
       padding: 0 20px;
     }
 
@@ -44,11 +44,23 @@
       color: #2c3e50;
     }
 
-    /* Grid layout for cards */
+    /* Horizontal scrolling row of cards */
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      display: flex;
+      flex-direction: row;
       gap: 25px;
+      overflow-x: auto;
+      padding-bottom: 15px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .gallery::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .gallery::-webkit-scrollbar-thumb {
+      background: #bbb;
+      border-radius: 4px;
     }
 
     .card {
@@ -56,9 +68,11 @@
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       overflow: hidden;
+      flex: 0 0 320px; /* fixed width so they align horizontally */
       display: flex;
       flex-direction: column;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      scroll-snap-align: start;
     }
 
     .card:hover {
@@ -68,6 +82,7 @@
 
     .card img {
       width: 100%;
+      height: auto;
       display: block;
     }
 
@@ -100,12 +115,6 @@
     .card-content a:hover {
       background: #219150;
     }
-
-    @media (max-width: 768px) {
-      section {
-        padding: 0 10px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -115,10 +124,12 @@
     <p>Interactive dashboards and data stories built with Tableau</p>
   </header>
 
-  <!-- Section: Featured Dashboard -->
+  <!-- Section: Dashboards -->
   <section>
-    <h2>Avocado Apocalypse Chart</h2>
+    <h2>Dashboards</h2>
     <div class="gallery">
+
+      <!-- Avocado -->
       <div class="card">
         <img src="https://public.tableau.com/thumb/views/AvocadoApocalypseAnalysis/Avocado"
              alt="Avocado Apocalypse Analysis">
@@ -129,40 +140,31 @@
           </a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Section: Text Mining & NLP -->
-  <section>
-    <h2>Yelp Restaurant Dashboard</h2>
-    <div class="gallery">
+      <!-- Yelp -->
       <div class="card">
         <img src="https://public.tableau.com/thumb/views/YelpTextMining_17580463966820/ODBQuality"
              alt="Yelp Text Mining – ODB Quality">
         <div class="card-content">
-          <h3>Yelp Restaurant Dashboard – ODB Quality</h3>
+          <h3>Yelp Text Mining – ODB Quality</h3>
           <a href="https://public.tableau.com/views/YelpTextMining_17580463966820/ODBQuality?:embed=y&:showVizHome=no&:display_count=n" target="_blank">
             View Dashboard
           </a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Section: Capstone Projects -->
-  <section>
-    <h2>Mortality Rate Capstone Project</h2>
-    <div class="gallery">
+      <!-- Capstone -->
       <div class="card">
         <img src="https://public.tableau.com/thumb/views/Capstone14_15564930558420/Story1"
              alt="Capstone Story">
         <div class="card-content">
-          <h3>Historical Mortality Rates in the US - Capstone Story</h3>
+          <h3>Capstone14 – Story 1</h3>
           <a href="https://public.tableau.com/views/Capstone14_15564930558420/Story1?:embed=y&:showVizHome=no&:display_count=n" target="_blank">
             View Dashboard
           </a>
         </div>
       </div>
+
     </div>
   </section>
 
